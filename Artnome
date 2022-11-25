@@ -4,8 +4,9 @@ let STEP = CANVAS_SIZE/GRID_SQUARES;
 let NUM_CIRCLES = 400
 let NUM_TRI = 150
 let NUM_TRANSFORM = 50
+let TRANSPARANCY = 5
 
-var COLORS = [[216, 164, 127],[239, 131, 84],[238, 75, 106],[223, 59, 87],[15, 113, 115], [179, 255, 179], [202, 231, 185], [205, 247, 246], [16, 255, 203], [181, 248, 254], [151, 249, 249], [164, 222, 249]]
+var COLORS = [[216, 164, 127, TRANSPARANCY],[239, 131, 84, TRANSPARANCY],[238, 75, 106, TRANSPARANCY],[223, 59, 87, TRANSPARANCY],[15, 113, 115, TRANSPARANCY], [179, 255, 179, TRANSPARANCY], [202, 231, 185, TRANSPARANCY], [205, 247, 246, TRANSPARANCY], [16, 255, 203, TRANSPARANCY], [181, 248, 254, TRANSPARANCY], [151, 249, 249, TRANSPARANCY], [164, 222, 249, TRANSPARANCY]]
 
 
 
@@ -52,7 +53,7 @@ function setup() {
     let randomColor = random(COLORS)
     fill(randomColor)
     
-//     noStroke();
+ // noStroke();
 
     for(var j = 0;j < NUM_TRANSFORM;j++){
     circle(random_X*STEP, random_Y*STEP,20)
